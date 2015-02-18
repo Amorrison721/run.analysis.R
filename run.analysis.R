@@ -42,7 +42,7 @@ melted<-melt(tidy_data,id.var=c("Subject", "Activity"))
 means = dcast(melted , Subject + Activity ~ variable, mean)
 #save table as .txt file
 
-write.table(means, "tidy_data.txt")
+write.table(means, "tidy_data.txt",row.name=F)
 
 #save as excel
 library(xlsx)
